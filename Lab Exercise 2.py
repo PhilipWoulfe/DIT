@@ -11,16 +11,25 @@ def convert_number(num, base):
 
 
 def get_digit(num):
+
     if 0 <= num < 10:
         return str(num)
     elif num < 16:
+        # convert from decimal to hex etc.
         return chr(ord('A') + num % 10)
     # elif num < 61:
         # return chr(ord('a') + num % 10)
 
+# ensure loop runs once
+num_str = "placeholder text"
+base_str = "placeholder text"
 
-num_str = input("Enter a number to be converted: ")
-base_str = input("Enter the base to convert to: ")
+# validate inputs
+while not num_str.isdigit():
+    num_str = input("Enter a number to be converted (positive integer): ")
+
+while not base_str.isdigit():
+    base_str = input("Enter the base to convert to: ")
 
 num_int = int(num_str)
 base_int = int(base_str)
