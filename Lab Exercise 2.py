@@ -18,9 +18,13 @@ def get_digit(num):
     # elif num < 61:
         # return chr(ord('a') + num % 10)
 
+num_str = "placeholder text"
 
-num_str = input("Enter a number to be converted: ")
-base_str = input("Enter the base to convert to: ")
+while not num_str.isdigit():
+    num_str = input("Enter a number to be converted: ")
+
+while not base_str.isdigit():
+    base_str = input("Enter the base to convert to: ")
 
 num_int = int(num_str)
 base_int = int(base_str)
